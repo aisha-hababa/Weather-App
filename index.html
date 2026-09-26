@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="card">
+      <!-- Header -->
+      <header class="header">
+        <div class="logo">
+          <span class="logo-icon">☀</span> <span>Weather</span>
+        </div>
+        <span class="status">LIVE</span>
+      </header>
+
+      <!-- Search -->
+      <div class="search">
+        <input
+          type="text"
+          placeholder="Search for a city..."
+          spellcheck="false"
+        />
+        <button><img src="images/search.png" alt="Search" /></button>
+      </div>
+
+      <!-- loading -->
+      <div class="loading">
+        <div class="loading-weather">
+          <div class="loading-sun">☀</div>
+          <div class="loading-cloud">☁</div>
+          <div class="loading-ring"></div>
+        </div>
+
+        <p>Loading weather...</p>
+      </div>
+
+      <!-- Error -->
+      <div class="error">
+        <p>We couldn't find that city. Try another one.</p>
+      </div>
+      <!-- Weather -->
+      <section class="weather">
+        <div class="location">
+          <h2 class="city"></h2>
+        </div>
+        <!-- Main weather -->
+        <div class="main-weather">
+          <div class="weather-visual">
+            <div class="sun-glow"></div>
+            <img src="images/rain.png" class="weather-icon" alt="Weather" />
+          </div>
+          <div class="temperature">
+            <h1 class="temp"></h1>
+            <p class="description">Clear Sky</p>
+          </div>
+        </div>
+        <!-- Main details -->
+        <div class="details">
+          <div class="col">
+            <div class="detail-icon">💧</div>
+            <div>
+              <p class="humidity"></p>
+              <p class="detail-label">Humidity</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="detail-icon">💨</div>
+            <div>
+              <p class="wind"></p>
+              <p class="detail-label">Wind Speed</p>
+            </div>
+          </div>
+        </div>
+        <!-- Extra information -->
+        <div class="extra-details">
+          <div class="extra-card">
+            <span class="extra-icon">🌡</span>
+            <div>
+              <p class="extra-value feels-like"></p>
+              <p class="extra-label">Feels Like</p>
+            </div>
+          </div>
+          <div class="extra-card">
+            <span class="extra-icon">◉</span>
+            <div>
+              <p class="extra-value pressure"></p>
+              <p class="extra-label">Pressure</p>
+            </div>
+          </div>
+          <div class="extra-card">
+            <span class="extra-icon">👁</span>
+            <div>
+              <p class="extra-value visibility"></p>
+              <p class="extra-label">Visibility</p>
+            </div>
+          </div>
+        </div>
+        <!-- Sun information -->
+        <div class="sun-info">
+          <div>
+            <span>🌅</span>
+            <div>
+              <p>Sunrise</p>
+              <strong class="sunrise"></strong>
+            </div>
+          </div>
+          <div>
+            <span>🌇</span>
+            <div>
+              <p>Sunset</p>
+              <strong class="sunset"></strong>
+            </div>
+          </div>
+        </div>
+        <!-- Forecast -->
+        <div class="forecast">
+          <h3>5-Day Forecast</h3>
+          <div class="forecast-list">
+            <div class="forecast-card">
+              <p class="forecast-day"></p>
+              <img class="forecast-icon" src="" alt="Weather" />
+              <p class="forecast-temp"></p>
+              <p class="forecast-description"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
